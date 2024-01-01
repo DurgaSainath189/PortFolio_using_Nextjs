@@ -7,8 +7,9 @@ import {
   FaGithub,
   FaFacebook,
   FaTwitter,
-  FaMailBulk,
 } from "react-icons/fa";
+
+import {HiEnvelope} from 'react-icons/hi2'
 
 const Socials = () => {
   return (
@@ -26,7 +27,7 @@ const Socials = () => {
         <FaTwitter size={22} />
       </Link>
       <Link href={""} className="hover:text-accent transition-all duration-300">
-        <FaMailBulk size={22} />
+        <HiEnvelope size={22} />
       </Link>
     </div>
   );
