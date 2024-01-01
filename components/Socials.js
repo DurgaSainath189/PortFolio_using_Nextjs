@@ -2,7 +2,13 @@
 import Link from "next/link";
 
 //icons
-import { FaLinkedin, FaGithub, FaFacebook,FaTwitter,FaMailBulk } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaFacebook,
+  FaTwitter,
+  FaMailBulk,
+} from "react-icons/fa";
 
 const Socials = () => {
   return (
@@ -22,7 +28,6 @@ const Socials = () => {
       <Link href={""} className="hover:text-accent transition-all duration-300">
         <FaMailBulk size={22} />
       </Link>
-
     </div>
   );
 };
