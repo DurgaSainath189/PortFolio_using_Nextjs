@@ -21,7 +21,7 @@ const ProjectsBtn = () => {
           alt=""
           className="animate-spin-slow w-full h-full max-w-[141px] max-h-[140px]"
         />
-        <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all-0.3 duration-300" />
+        <HiArrowRight className="text-accent absolute text-4xl group-hover:translate-x-2 transition-all-0.3 duration-300" />
       </Link>
     </div>
   );

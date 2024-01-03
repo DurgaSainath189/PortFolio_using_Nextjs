@@ -1,18 +1,15 @@
-//components
+// Import necessary modules and components
 import ParticleContainer from "../components/ParticlesContainer";
 import ProjectBtn from "../components/ProjectsBtn";
 import NewAvatar from "../components/NewAvatar";
-
-//framer motion
 import { motion } from "framer-motion";
-
-//variants
 import { fadeIn } from "../variants";
-
-//type animation
 import { TypeAnimation } from "react-type-animation";
+import ResumeDownloadButton from "../components/ResumeDownloadButton";
 
+// Create the Home component
 const Home = () => {
+  // Function to get the current time of the day
   const getCurrentTime = () => {
     const currentHour = new Date().getHours();
     if (currentHour >= 1 && currentHour < 12) {
@@ -23,7 +20,10 @@ const Home = () => {
       return "Evening";
     }
   };
+
+  // Get the current time
   const greetingTime = getCurrentTime();
+
   return (
     <div className="bg-primary/60 h-full">
       {/* text */}
@@ -41,10 +41,11 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 mt-4"
           >
             Good <span className="text-accent">{greetingTime}</span>,
           </motion.h1>
+          {/* name and role with type animation */}
           <motion.h2
             variants={fadeIn("down", 0.3)}
             initial="hidden"
@@ -75,7 +76,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-lg text-white/60"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-lg text-white"
           >
             I am a versatile developer and designer skilled in web and Android
             development, with expertise in HTML, CSS, JavaScript, Dart, Flutter,
@@ -83,30 +84,29 @@ const Home = () => {
             projects, reflecting my commitment to creating innovative and
             user-centric solutions.
           </motion.p>
-          {/* button */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectBtn />
+          {/* button and resume link */}
+          {/* <div className="flex flex-col items-center xl:flex-row xl:justify-between relative">
+            <div className="flex items-center">
+              <ProjectBtn />
+              <ResumeDownloadButton />
+            </div>
+          </div> */}
+          <div className="flex flex-col items-center xl:flex-row xl:justify-between relative">
+            <div className="hidden xl:flex items-center">
+              <ProjectBtn />
+              <ResumeDownloadButton />
+            </div>
           </div>
-          <motion.div
-            variants={fadeIn("down", 0.5)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
-            <ProjectBtn />
-          </motion.div>
         </div>
       </div>
       {/* image */}
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
+      <div className="w-[1125px] h-full absolute right-0 bottom-0">
         {/* bg-img */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge z-0"></div>
         {/* particles */}
         <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
           <ParticleContainer />
         </div>
-
         {/* avatar image */}
         <motion.div
           variants={fadeIn("up", 0.6)}

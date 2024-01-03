@@ -30,8 +30,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
-              reprehenderit ea in, repudiandae doloribus consequatur.
+              The Future depends on what you do today.
             </motion.p>
           </div>
           {/* slider */}

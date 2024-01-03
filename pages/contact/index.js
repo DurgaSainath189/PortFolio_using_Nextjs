@@ -33,14 +33,18 @@ const Contact = () => {
             animate="show"
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            action="mailto:durgasainathdora@gmail.com"
+            method="post"
+            enctype="text/plain"
+            target="_blank"
           >
             {/* group */}
             <div className="flex gap-x-6 w-full">
-              <input type="text" placeholder="Name" className="input" />
-              <input type="text" placeholder="Email" className="input" />
+              <input type="text" placeholder="Name" className="input" required/>
+              <input type="text" placeholder="Email" className="input" required/>
             </div>
-            <input type="text" placeholder="Subject" className="input" />
-            <textarea placeholder="Message" className="textarea"></textarea>
+            <input type="text" placeholder="Subject" className="input" required/>
+            <textarea placeholder="Message" className="textarea"required></textarea>
             <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let&apos;s Talk

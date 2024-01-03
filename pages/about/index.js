@@ -8,13 +8,26 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaJava,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiDart,
+  SiExpress,
+  SiFlutter,
+  SiMongodb,
+  SiMysql,
+  SiVisualstudiocode,
+  SiGit,
+  SiGithub,
+  SiFirebase,
+  SiPhp,
 } from "react-icons/si";
 
 //next image
@@ -32,68 +45,96 @@ export const aboutData = [
           <FaCss3 key="css" />,
           <FaJs key="js" />,
           <FaReact key="react" />,
+          <FaNodeJs key="node" />,
           <SiNextdotjs key="next" />,
-          <SiFramer key="framer" />,
-          <FaWordpress key="wordpress" />,
+          <SiExpress key="express" />,
+          // <SiFramer key="framer" />,
+          <SiPhp key="php" />,
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "App Development",
+        icons: [<SiFlutter key="flutter" />],
+      },
+      // {
+      //   title: "UI/UX Design",
+      //   icons: [<FaFigma key="figma" />],
+      // },
+      {
+        title: "Programming Languages",
         icons: [
-          <FaFigma key="figma" />,
-          <SiAdobexd key="adobexd" />,
-          <SiAdobephotoshop key="photoshop" />,
+          <SiC key="c" />,
+          <SiCplusplus key="c++" />,
+          <FaJava key="java" />,
+          <SiPython key="python" />,
+          <SiDart key="dart" />,
+        ],
+      },
+      {
+        title: "Databases",
+        icons: [
+          <SiMongodb key="mongodb" />,
+          <SiMysql key="sql" />,
+          <SiFirebase key="firebase" />,
+        ],
+      },
+      {
+        title: "Developer Tools",
+        icons: [
+          <SiVisualstudiocode key="vscode" />,
+          <SiGit key="git" />,
+          <SiGithub key="github" />,
         ],
       },
     ],
   },
   {
-    title: "awards",
+    title: "Education",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "SRM University AP - B.Tech (CSE)",
+        stage: "2021 - 2025",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Sri GCSR Junior College",
+        stage: "2019 - 2021",
+      },
+      {
+        title: "GMR V DAV Public School",
+        stage: "2009 - 2019",
       },
     ],
   },
   {
-    title: "experience",
+    title: "Experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Zetpeak Company (App Developer)",
+        stage: "Jun 2023 - Sep 2023",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "CodeSwap Solutions (Web Developer)",
+        stage: "Jun 2023 - Aug 2023",
       },
     ],
   },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
+  // {
+  //   title: "credentials",
+  //   info: [
+  //     {
+  //       title: "Web Development - ABC University, LA, CA",
+  //       stage: "2011",
+  //     },
+  //     {
+  //       title: "Computer Science Diploma - AV Technical Institute",
+  //       stage: "2009",
+  //     },
+  //     {
+  //       title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+  //       stage: "2006",
+  //     },
+  //   ],
+  // },
 ];
 
 //components
@@ -135,20 +176,24 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificant designs.
+            Creating my own <span className="text-accent">sunshine</span>.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 hidden lg:block"
           >
-            10 years ago,I began freelancing as a developer. since then, Ive
-            done remote work for agencies, consulted for startups, and
-            collaborated on digital products for bussiness and consumer use.
+            I believe I am a very organized individual. I achieve my goals and
+            targets by setting realistic goals with a timeframe I can work with.
+            I am developing new ways to achieve my goals creatively and work in
+            order of relevance and urgency. I do like to be on top of my work
+            and use lists and calendars to my advantage. If I were to describe
+            myself in a few words, I would say I am hard-working and a quick
+            learner.
           </motion.p>
+
           {/* counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
@@ -164,7 +209,7 @@ const About = () => {
                   <CountUp start={0} end={3} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Internship Experience
+                  Internship Experience (months)
                 </div>
               </div>
               {/* Leetcode Problems */}

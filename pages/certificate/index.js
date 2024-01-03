@@ -30,8 +30,8 @@ const Certificates = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
-              reprehenderit ea in, repudiandae doloribus consequatur.
+              Don&apos;t find your certificate in the worth, find your worth in the
+              certificate
             </motion.p>
           </div>
           {/* slider */}
