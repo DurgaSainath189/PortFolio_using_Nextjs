@@ -1,20 +1,29 @@
-//next image
-import Image from "next/image";
-
 //components
 import ParticleContainer from "../components/ParticlesContainer";
 import ProjectBtn from "../components/ProjectsBtn";
-import Avatar from "../components/Avatar";
-
+import NewAvatar from "../components/NewAvatar";
 
 //framer motion
 import { motion } from "framer-motion";
 
 //variants
 import { fadeIn } from "../variants";
-import NewAvatar from "../components/NewAvatar";
+
+//type animation
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
+  const getCurrentTime = () => {
+    const currentHour = new Date().getHours();
+    if (currentHour >= 1 && currentHour < 12) {
+      return "Morning";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      return "Afternoon";
+    } else {
+      return "Evening";
+    }
+  };
+  const greetingTime = getCurrentTime();
   return (
     <div className="bg-primary/60 h-full">
       {/* text */}
@@ -26,7 +35,7 @@ const Home = () => {
         className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30"
       >
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          {/* title */}
+          {/* greeting message */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -34,28 +43,52 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas
-            <br /> Into <span className="text-accent">Digital Relality</span>
+            Good <span className="text-accent">{greetingTime}</span>,
           </motion.h1>
-          {/* subtitle */}
-          <motion.p
+          <motion.h2
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="h2"
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perspiciatis libero esse eos, fugiat a neque similique sed sunt
-            veniam illum ipsum harum consectetur distinctio quia sit commodi
-            tenetur voluptates facere.
+            <span>I&apos;m </span>
+            <TypeAnimation
+              sequence={[
+                "Durga Sainath",
+                2000,
+                "a Web Developer",
+                2000,
+                "an Android Developer",
+                2000,
+                "a Designer",
+                2000,
+              ]}
+              speed={25}
+              repeat={Infinity}
+              className="text-accent"
+            />
+          </motion.h2>
+          {/* subtitle */}
+          <motion.p
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-lg text-white/60"
+          >
+            I am a versatile developer and designer skilled in web and Android
+            development, with expertise in HTML, CSS, JavaScript, Dart, Flutter,
+            and modern frameworks. My portfolio showcases a diverse range of
+            projects, reflecting my commitment to creating innovative and
+            user-centric solutions.
           </motion.p>
           {/* button */}
           <div className="flex justify-center xl:hidden relative">
             <ProjectBtn />
           </div>
           <motion.div
-            variants={fadeIn("down", 0.4)}
+            variants={fadeIn("down", 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -76,14 +109,14 @@ const Home = () => {
 
         {/* avatar image */}
         <motion.div
-          variants={fadeIn("up", 0.5)}
+          variants={fadeIn("up", 0.6)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
         >
-          <NewAvatar/>
+          <NewAvatar />
         </motion.div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const ParticlesContainer = () => {
   return (
     <div className="w-screen h-screen overflow-hidden absolute top-0 left-0">
       <Particles
-        className='fixed top-0 left-0 w-full h-full'
+        className='w-full h-full absolute translate-z-0'
         id='tsparticles'
         init={particleInit}
         loaded={particleLoaded}
@@ -25,7 +25,7 @@ const ParticlesContainer = () => {
           interactivity: {
             events: {
               onClick: {
-                enable: false,
+                enable: true,
                 mode: 'push',
               },
               onHover: {
