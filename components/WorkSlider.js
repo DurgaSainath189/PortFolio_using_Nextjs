@@ -20,19 +20,19 @@ export const workSLider = {
       images: [
         {
           title: "title",
-          path: "/thumb1.jpg",
+          path: "/thumb1.png",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
+          path: "/thumb2.png",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
+          path: "/thumb3.png",
         },
         {
           title: "title",
-          path: "/thumb4.jpg",
+          path: "/thumb4.png",
         },
       ],
     },
@@ -40,19 +40,19 @@ export const workSLider = {
       images: [
         {
           title: "title",
-          path: "/thumb4.jpg",
+          path: "/thumb5.png",
         },
         {
           title: "title",
-          path: "/thumb1.jpg",
+          path: "/thumb6.png",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
+          path: "/thumb7.png",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
+          path: "/thumb3.png",
         },
       ],
     },
@@ -83,7 +83,7 @@ const WorkSlider = () => {
                       {/* images */}
                       <Image src={image.path} width={500} height={300} alt="" />
                       {/* overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#c2d121] to-[#707169] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       {/* title */}
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                         <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
