@@ -1,50 +1,56 @@
 // icons
+import { RxArrowTopRight } from "react-icons/rx";
+
 import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight
-} from "react-icons/rx";
+  SiLinkedin,
+  SiCodechef,
+  SiFigma,
+  SiUdemy,
+  SiNodedotjs,
+} from "react-icons/si";
 
 //swiper react components
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 //import required modules
-import {FreeMode,Pagination} from 'swiper'
+import { FreeMode, Pagination } from "swiper";
 
 //swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 // data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <SiLinkedin />,
+    title: "C/C++",
+    description: "Certified with C/C++ essential training from Linkedin",
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <SiUdemy />,
+    title: "Web Development",
+    description: "Udemy Web Development Course by Dr.Angela Yu",
   },
   {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <SiNodedotjs />,
+    title: "NodeJs Masterclass  ",
+    description: "NodeJS Masterclass (Express, MongoDB) - by Sujan Pokhrel",
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <SiFigma />,
+    title: "UI/UX Design",
+    description: "UI/UX Design with Figma : 5+ Real World Projects",
   },
   {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <SiCodechef />,
+    title: "SQL/Python",
+    description: "Certified with SQL/Python problem sloving from Linkedin",
+  },
+  {
+    icon: <SiLinkedin />,
+    title: "HTML/CSS",
+    description: "Certified with HTML/CSS essential training from Linkedin",
   },
 ];
 
@@ -77,7 +83,9 @@ const ServiceSlider = () => {
               {/* title and desc */}
               <div className="mb-8">
                 <div className="mb-2 text-lg">{item.title}</div>
-                <p className="max-w-[350px] leading-normal">{item.description}</p>
+                <p className="max-w-[350px] leading-normal">
+                  {item.description}
+                </p>
               </div>
               {/* arrow */}
               <div className="text-3xl">

@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 //icons
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 
 // data
 export const workSLider = {
@@ -20,19 +21,23 @@ export const workSLider = {
       images: [
         {
           title: "title",
-          path: "/thumb1.png",
+          path: "/thumb9.png",
+          link: "https://github.com/DurgaSainath189/OIBSIP_Level1_Task1",
         },
         {
           title: "title",
-          path: "/thumb2.png",
+          path: "/thumb10.png",
+          link: "https://github.com/DurgaSainath189/OIBSIP_Level1_Task3",
         },
         {
           title: "title",
-          path: "/thumb3.png",
+          path: "/thumb6.png",
+          link: "https://github.com/DurgaSainath189/World-Time",
         },
         {
           title: "title",
-          path: "/thumb4.png",
+          path: "/thumb7.png",
+          link: "https://github.com/DurgaSainath189/Expenses_Tracker",
         },
       ],
     },
@@ -40,19 +45,23 @@ export const workSLider = {
       images: [
         {
           title: "title",
-          path: "/thumb5.png",
+          path: "/thumb18.png",
+          link: "https://github.com/DurgaSainath189/Responsive_Login_Form",
         },
         {
           title: "title",
-          path: "/thumb6.png",
+          path: "/thumb19.png",
+          link: "https://github.com/DurgaSainath189/Text-Wizard",
         },
         {
           title: "title",
-          path: "/thumb7.png",
+          path: "/thumb20.png",
+          link: "https://github.com/DurgaSainath189/LGMVIP-Web-Task-1",
         },
         {
           title: "title",
-          path: "/thumb3.png",
+          path: "/thumb21.png",
+          link: "https://github.com/DurgaSainath189/Weather-Teller",
         },
       ],
     },
@@ -60,6 +69,10 @@ export const workSLider = {
 };
 
 const WorkSlider = () => {
+  const handleArrowClick = (link) => {
+    window.location.href = link;
+  };
+
   return (
     <Swiper
       spaceBetween={10}
@@ -69,44 +82,39 @@ const WorkSlider = () => {
       modules={[Pagination]}
       className="h-[280px] sm:h-[480px]"
     >
-      {workSLider.slides.map((slide, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((image, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
-                  >
-                    <div className="flex items-center justify-center realtive overflow-hidden group">
-                      {/* images */}
-                      <Image src={image.path} width={500} height={300} alt="" />
-                      {/* overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#c2d121] to-[#707169] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      {/* title */}
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* title part 1 */}
-                          <div className="delay-100">Live</div>
-                          {/* title part 2 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                            Demo
-                          </div>
-                          {/* icon */}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                            <BsArrowRight />
-                          </div>
+      {workSLider.slides.map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+            {slide.images.map((image, index) => (
+              <div
+                key={index}
+                className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+              >
+                <Link href={image.link}>
+                  <div className="flex items-center justify-center relative overflow-hidden group">
+                    <Image src={image.path} width={500} height={300} alt="" />
+                    <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[black] to-[#0f0d0d] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                    <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                      <div className="flex items-center gap-x-2 text-[18px] tracking-[0.2em]">
+                        <div className="delay-100">Veiw</div>
+                        <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                          Code
+                        </div>
+                        <div
+                          className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200"
+                          onClick={() => handleArrowClick(image.link)}
+                        >
+                          <BsArrowRight />
                         </div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </SwiperSlide>
-        );
-      })}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
