@@ -85,12 +85,6 @@ const Home = () => {
             user-centric solutions.
           </motion.p>
           {/* button and resume link */}
-          {/* <div className="flex flex-col items-center xl:flex-row xl:justify-between relative">
-            <div className="flex items-center">
-              <ProjectBtn />
-              <ResumeDownloadButton />
-            </div>
-          </div> */}
           <div className="flex flex-col items-center xl:flex-row xl:justify-between relative">
             <div className="hidden xl:flex items-center">
               <ProjectBtn />

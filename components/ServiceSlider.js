@@ -40,7 +40,7 @@ const serviceData = [
   {
     icon: <SiFigma />,
     title: "UI/UX Design",
-    description: "UI/UX Design with Figma : 5+ Real World Projects",
+    description: "UI/UX Design with Figma : with 5+ Real World Projects",
   },
   {
     icon: <SiCodechef />,
