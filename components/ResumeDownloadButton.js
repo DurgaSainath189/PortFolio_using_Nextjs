@@ -18,7 +18,7 @@ const ResumeDownloadButton = () => {
     setDownloading(true);
 
     setTimeout(() => {
-      const resumeUrl = "/path-to-your-resume.pdf";
+      const resumeUrl = "/Resume.pdf";
       const downloadLink = document.createElement("a");
       downloadLink.href = resumeUrl;
       downloadLink.download = "Durga_Sainath_Resume.pdf";
