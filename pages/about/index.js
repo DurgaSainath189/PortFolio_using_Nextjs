@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-// icons
 import {
   FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
   FaJava,
   FaNodeJs,
@@ -14,30 +12,42 @@ import {
 
 import {
   SiNextdotjs,
-  SiFramer,
   SiC,
   SiCplusplus,
   SiPython,
   SiDart,
   SiExpress,
-  SiFlutter,
   SiMongodb,
   SiMysql,
   SiVisualstudiocode,
   SiGit,
   SiGithub,
   SiFirebase,
-  SiPhp,
+  SiApachespark,
+  SiApachehive,
+  SiApachehadoop,
+  SiKubernetes,
+  SiDocker,
+  SiApacheairflow,
 } from "react-icons/si";
 
-//next image
 import Image from "next/image";
 
-//  about export data
 export const aboutData = [
   {
     title: "skills",
     info: [
+      {
+        title: "Data Engineering Stack",
+        icons: [
+          <SiApachespark key="apache" />,
+          <SiApachehive key="hive" />,
+          <SiApachehadoop key="hadoop" />,
+          <SiKubernetes key="k8s" />,
+          <SiDocker key="docker" />,
+          <SiApacheairflow key="airflow" />,
+        ],
+      },
       {
         title: "Web Development",
         icons: [
@@ -48,17 +58,11 @@ export const aboutData = [
           <FaNodeJs key="node" />,
           <SiNextdotjs key="next" />,
           <SiExpress key="express" />,
-          // <SiFramer key="framer" />,
-          <SiPhp key="php" />,
         ],
       },
-      {
-        title: "App Development",
-        icons: [<SiFlutter key="flutter" />],
-      },
       // {
-      //   title: "UI/UX Design",
-      //   icons: [<FaFigma key="figma" />],
+      //   title: "App Development",
+      //   icons: [<SiFlutter key="flutter" />],
       // },
       {
         title: "Programming Languages",
@@ -84,6 +88,7 @@ export const aboutData = [
           <SiVisualstudiocode key="vscode" />,
           <SiGit key="git" />,
           <SiGithub key="github" />,
+          <FaFigma key="figma" />,
         ],
       },
     ],
@@ -109,12 +114,16 @@ export const aboutData = [
     title: "Experience",
     info: [
       {
-        title: "Zetpeak Company (App Developer)",
-        stage: "Jun 2023 - Sep 2023",
+        title: "Seagate Technology (Big Data Engineer)",
+        stage: "Jul 2024 - Present",
       },
       {
         title: "CodeSwap Solutions (Web Developer)",
         stage: "Jun 2023 - Aug 2023",
+      },
+      {
+        title: "Zetpeak Company (App Developer)",
+        stage: "Jun 2023 - Sep 2023",
       },
     ],
   },
@@ -209,13 +218,13 @@ const About = () => {
                   <CountUp start={0} end={3} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Internship Experience (months)
+                  Internship Experience
                 </div>
               </div>
               {/* Leetcode Problems */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={200} duration={5} />+
+                  <CountUp start={0} end={250} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Leetcode Problems
@@ -224,7 +233,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 ">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={15} duration={5} />+
+                  <CountUp start={0} end={20} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Projects

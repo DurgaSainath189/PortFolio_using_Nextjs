@@ -21,6 +21,30 @@ export const workSLider = {
       images: [
         {
           title: "title",
+          path: "/thumb22.png",
+          link: "https://github.com/DurgaSainath189/Brain_Space",
+        },
+        {
+          title: "title",
+          path: "/thumb23.png",
+          link: "https://github.com/DurgaSainath189/Filewave",
+        },
+        {
+          title: "title",
+          path: "/thumb24.png",
+          link: "https://github.com/DurgaSainath189/AI_Notes",
+        },
+        {
+          title: "title",
+          path: "/thumb25.png",
+          link: "https://github.com/DurgaSainath189/Instant_Wave",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "title",
           path: "/thumb9.png",
           link: "https://github.com/DurgaSainath189/OIBSIP_Level1_Task1",
         },
@@ -90,7 +114,7 @@ const WorkSlider = () => {
                 key={index}
                 className="relative rounded-lg overflow-hidden flex items-center justify-center group"
               >
-                <Link href={image.link}>
+                <Link href={image.link} target="blank">
                   <div className="flex items-center justify-center relative overflow-hidden group">
                     <Image src={image.path} width={500} height={300} alt="" />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[black] to-[#0f0d0d] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>

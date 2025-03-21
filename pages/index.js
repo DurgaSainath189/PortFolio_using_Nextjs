@@ -58,6 +58,8 @@ const Home = () => {
               sequence={[
                 "Durga Sainath",
                 2000,
+                "a Big Data Engineer",
+                2000,
                 "a Web Developer",
                 2000,
                 "an Android Developer",
@@ -78,11 +80,10 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-lg text-white"
           >
-            I am a versatile developer and designer skilled in web and Android
-            development, with expertise in HTML, CSS, JavaScript, Dart, Flutter,
-            and modern frameworks. My portfolio showcases a diverse range of
-            projects, reflecting my commitment to creating innovative and
-            user-centric solutions.
+            I am a skilled Web Developer and Big Data Engineer with expertise in
+            building scalable web applications and handling large-scale data
+            processing. I specialize in front-end and back-end development, data
+            pipelines, and cloud-based solutions.
           </motion.p>
           {/* button and resume link */}
           <div className="flex flex-col items-center xl:flex-row xl:justify-between relative">
